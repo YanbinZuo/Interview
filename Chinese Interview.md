@@ -46,7 +46,7 @@ a,b,c 对比 https://blog.csdn.net/weixin_39679367/article/details/83188391
   **缺点：** 没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。
 
 
-### 5. TCP/IP
+### 5. TCP/IP    https://www.bilibili.com/video/BV1Vy4y177YB?p=2     
   **a。** OSI7层参考模型：应用层，表示层，会话层，传输控制层，网络层，链路层，物理层   
       TCP/IP: (客户端)
         程序  应用层

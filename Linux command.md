@@ -69,5 +69,5 @@ git push
 > git bash configuration 
      
     git config -l(l is list)   
-    git --system --list   
-    git --global --list
+    git --system --list：查看系统config     
+    git --global --list：查看当前用户配置

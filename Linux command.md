@@ -66,6 +66,7 @@ git add one.c
 git commit -m"one"    
 git push    
  
-> git bash configuration <      
- git config -l(l is list)   
- git --system --list   
+> git bash configuration 
+     
+    git config -l(l is list)   
+    git --system --list   

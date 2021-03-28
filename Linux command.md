@@ -70,3 +70,4 @@ git push
      
     git config -l(l is list)   
     git --system --list   
+    git --global --list

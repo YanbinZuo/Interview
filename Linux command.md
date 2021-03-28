@@ -8,7 +8,7 @@
 8)rm-r：删除一个文件夹, rm-r src删除src目录       
 9)mv：文件移动，mv idnex.html src index.html是我们要移动的文件，src是目标文件夹，当然，这样写，必须是在同一目录下      
 10)reset：重新初始化终端/清屏      
-11)clear：清屏    
+11)clear：清屏    （windows里叫做cls）    
 12)history：查看命令历史    
 13)help：帮助    
 14)exit：退出    

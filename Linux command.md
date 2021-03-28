@@ -67,5 +67,5 @@ git commit -m"one"
 git push    
  
 > git bash configuration      
-  git config -l(l is list)   
-  git --system --list   
+ git config -l(l is list)   
+ git --system --list   

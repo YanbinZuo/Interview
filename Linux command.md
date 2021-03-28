@@ -15,7 +15,6 @@
 15)#：表示注释    
 
 （rm -rf/删除电脑所有文件）   
-> 大括号
 
     
 sudo（管理员程序）    
@@ -67,3 +66,6 @@ git add one.c
 git commit -m"one"    
 git push    
  
+> git bash configuration   
+    git config -l(l is list)
+    git --system --list

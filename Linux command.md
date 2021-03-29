@@ -1,4 +1,4 @@
-## - [ ] Linux Command   
+##  > Linux Command   
 1)cd： 改变目录     
 2)cd.. 回退到上一个目录，直接cd进入默认目录     
 3)pwd：显示当前所在的目录路径。     

@@ -56,7 +56,7 @@ s(step) 进入
 q 退出   
    
 
-
+- [ ] Git Knowledge:
 
 cat a.c 显示a.c的代码    
 git clone sshkey 复制下来     

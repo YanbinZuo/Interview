@@ -67,7 +67,7 @@ git add one.c
 git commit -m"one"    
 git push    
     git有四个工作区域：工作目录(Working Directory)，暂存区(Stage/Index)，资源库(Repository/Git Directory)和远程的git仓库(Remote Directory)。    
-    Workspace：工作区，平时存放代码的地方；    
+    * Workspace：* 工作区，平时存放代码的地方；    
     Stage/Index：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到你的文件列表信息；    
     Repository：仓库区或本地仓库，就是安全存放数据的位置，这里面有你提交到所有版本的数据。其中Head指向最新放入仓库的版本；    
     Remote：远程仓库，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换。    

@@ -67,7 +67,8 @@ git add one.c
 git commit -m"one"    
 git push    
     git有四个工作区域：工作目录(Working Directory)，暂存区(Stage/Index)，资源库(Repository/Git Directory)和远程的git仓库(Remote Directory)。
-    *Working Directory* ----git add files----> *Stage* ----git commit----> *History(local directory)* ----git push----> *Remote Directory*
+    *Working Directory* ----git add files----> *Stage* ----git commit----> *History(local directory)* ----git push----> *Remote Directory*    
+    *Remote Directory*  ----git pull----> *History(local directory)* ----git reset----> *Stage* ----git checkout----> *Working Directory*
  
 > git bash configuration 
      

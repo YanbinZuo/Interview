@@ -1,4 +1,4 @@
-- [ ] ##Linux Command
+## - [ ] Linux Command   
 1)cd： 改变目录     
 2)cd.. 回退到上一个目录，直接cd进入默认目录     
 3)pwd：显示当前所在的目录路径。     
@@ -57,7 +57,7 @@ s(step) 进入
 q 退出   
    
 
-- [ ] ##Git Knowledge:
+## - [ ] Git Knowledge:   
 
 cat a.c 显示a.c的代码    
 git clone sshkey 复制下来     

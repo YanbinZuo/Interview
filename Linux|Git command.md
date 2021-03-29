@@ -58,13 +58,14 @@ q 退出
    
 
 ## Git Knowledge:   
-
+git init 初始化
+git statux 查看当前状态
 cat a.c 显示a.c的代码    
 git clone sshkey 复制下来     
 git pull    
 vi one.c   
-git add one.c    
-git commit -m"one"    
+git add one.c         git add . 添加所有文件到暂存区     
+git commit -m"one"    git commit -m提交暂存区的内容到本地仓库    -m 提交信息     
 git push    
     git有四个工作区域：工作目录(Working Directory)，暂存区(Stage/Index)，资源库(Repository/Git Directory)和远程的git仓库(Remote Directory)。    
     **Workspace：** 工作区，平时存放代码的地方；        
@@ -72,7 +73,19 @@ git push
     **Repository：** 仓库区或本地仓库，就是安全存放数据的位置，这里面有你提交到所有版本的数据。其中Head指向最新放入仓库的版本；    
     **Remote：** 远程仓库，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换。    
     *Working Directory* ----git add files----> *Stage* ----git commit----> *History(local directory)* ----git push----> *Remote Directory*    
-    *Remote Directory*  ----git pull----> *History(local directory)* ----git reset----> *Stage* ----git checkout----> *Working Directory*
+    *Remote Directory*  ----git pull----> *History(local directory)* ----git reset----> *Stage* ----git checkout----> *Working Directory*    
+**忽略文件(.gitignore)：**
+    1. 忽略文件空行或以#开始的行会被忽略    
+    2. 可以使用Linux通配符。例如，* 代表任意多个符号，？代表一个字符，[abc]代表可选字符范围，{string1,string2}代表可选字符串    
+    3. 如果名称的最前面有一个感叹号 ！，代表例外规则，将不被忽略    
+    4. 如果文件最前面有一个路径分隔符 /，表示要忽略的文件在此目录下，而子目录中的文件不忽略    
+    5. 如果文件最后面有一个路径分隔符 /，表示要忽略的是此目录下该名称的子目录，而非文件   
+    
+    *.txt         #忽略所有.txt结尾的文件    
+    !lib.txt      #忽略lib.txt除外的所有文件    
+    /temp         #忽略项目根目录下的TODO文件，不包括其他目录temp
+    build/        #忽略build/目录下的所有文件
+    doc/*.txt     #会忽略 doc/notes.txt文件   但不包括doc/server/arch.txt
  
 > git bash configuration 
      

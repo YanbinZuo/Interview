@@ -91,4 +91,14 @@ git push
      
     git config -l(l is list)   
     git --system --list：查看系统config     
-    git --global --list：查看当前用户配置
+    git --global --list：查看当前用户配置    
+    
+> git branch
+    git branch                                  列出本地所有分支    
+    git branch -r                               列出所有远程分支    
+    git branch [name]                           新建一个分支，但依然停留在当前分支    
+    git checkout -b [name]                      新建一个分支，并切换到该分支     
+    git merge [branch]                          合并指定分支到当前分支     
+    git branch -d [name]                        删除分支   
+    git push origin --delete [branch-name]      删除远程分支    
+    git branch -dr [remote/branch]              删除远程分支    

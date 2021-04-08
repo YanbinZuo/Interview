@@ -56,9 +56,11 @@ p a 打印a
 s(step) 进入    
 q 退出   
 
-hexdump [file]查看binary format file   
-hexdump -c [file]查看binary format file 并且一个byte为单位   
-xxd [file]查看binary format file   
+man [function name] 查看function的具体用法
+man 2 [function name] 查看function的更详细的具体用法
+hexdump [file] 查看binary format file   
+hexdump -c [file] 查看binary format file 并且一个byte为单位   
+xxd [file] 查看binary format file   
 cat ./w [file] | hexdump -c 查看可执行文件输出后的binary format file   
    
 

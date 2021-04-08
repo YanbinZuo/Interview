@@ -64,6 +64,14 @@ xxd [file]                  查看binary format file
 cat ./w [file] | hexdump -c 查看可执行文件输出后的binary format file   
    
 
+### 解决学校permission denied方法  
+1.  :~project1/initial-utilities/wgrep$ ./test-wgrep.sh  
+./test-wgrep.sh: line 8: ../../tester/run-tests.sh: Permission denied   
+解决方法：chmod u+x ../../tester/run-tests.sh  
+2. If you do not have execute permissions on that file. Try adding execute permission with 'chmod +x test-wcat.sh'  
+
+
+
 ## Git Knowledge:   
 git init 初始化
 git statux 查看当前状态

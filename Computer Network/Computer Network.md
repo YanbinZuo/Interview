@@ -39,7 +39,7 @@
   router needs to receive the packet completely before it can forward to the next hop.
   
 
-### Internet protocol stack    
+### Internet protocol stack(协议栈)    
   协议栈是指网络中各层协议的总和，其形象的反映了一个网络中数据传输的过程：由上层协议到底层协议，再由底层协议到上层协议。  
   application: supporting network applications  
    * IMAP, SMTP, HTTP   

@@ -18,4 +18,18 @@
   c. Suppose dprop is	less than d(trans). At time t=dtrans, where	is the first bit of the packet?  
   Answer: The	first	bit	has	reached	Host B  
     
-### 3. bandwidth delay  
+### 3. bandwidth delay product  
+  bandwidth delay product = R × d(prop)
+  
+
+### 4. queuing delay    
+  At the queue, the packet experiences a queuing delay as it waits to be transmitted onto the link. The length of the queuing delay of      
+  a specific packet will depend on the number of earlier-arriving packets that are queued and waiting for transmission onto the link.     
+  If the queue is empty and no other packet is currently being transmitted, then our packet’s queuing delay will be zero. On the other hand,  
+  if the traffic is heavy and many other packets are also waiting to be transmitted, the queuing delay will be long.   
+ 
+### 5. processing delay  
+  The time required to examine the packet’s header and determine where to direct the packet is part of the processing delay. The processing   
+  delay can also include other factors, such as the time needed to check for bit-level errors in the packet that occurred in transmitting    
+  the packet’s bits from the upstream node to router A. Processing delays in high-speed routers are typically on the order of microseconds or   
+  less. After this nodal processing, the router directs the packet to the queue that precedes the link to router B.   

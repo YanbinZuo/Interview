@@ -33,3 +33,7 @@
   delay can also include other factors, such as the time needed to check for bit-level errors in the packet that occurred in transmitting    
   the packet’s bits from the upstream node to router A. Processing delays in high-speed routers are typically on the order of microseconds or   
   less. After this nodal processing, the router directs the packet to the queue that precedes the link to router B.   
+  
+
+### store and forward
+  router needs to receive the packet completely before it can forward to the next hop.

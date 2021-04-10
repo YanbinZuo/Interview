@@ -37,3 +37,20 @@
 
 ### store and forward
   router needs to receive the packet completely before it can forward to the next hop.
+  
+
+### Internet protocol stack    
+  协议栈是指网络中各层协议的总和，其形象的反映了一个网络中数据传输的过程：由上层协议到底层协议，再由底层协议到上层协议。  
+  application: supporting network applications  
+   * IMAP, SMTP, HTTP   
+  transport: process-process data transfer  
+   * TCP, UDP   
+  network: routing of datagrams from source to destination   
+   * IP, routing protocols   
+  link: data transfer between neighboring network elements  
+   * Ethernet, wifi, PPP   
+  physical: bits "on the wire"   
+  
+  如一个HTTP请求，HTTP->TCP->IP，先转化成TCP数据包，再转化成IP数据包，再通过网卡传输出去；接收方通过网卡接收到IP数据包，去掉IP数据头，检测到是一个TCP数据包，  
+  就把TCP数据包传到TCP协议处理层，去掉TCP数据头，检测到是一个HTTP数据包，就把HTTP数据包传到HTTP协议处理层。   
+  所有的网络数据都是通过这样一层层的堆叠起来的协议来传送的，像栈一样，所以叫协议栈    

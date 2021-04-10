@@ -41,16 +41,30 @@
 
 ### Internet protocol stack(协议栈)  Lecture4     
   协议栈是指网络中各层协议的总和，其形象的反映了一个网络中数据传输的过程：由上层协议到底层协议，再由底层协议到上层协议。  
-  application: supporting network applications  
-   * IMAP, SMTP, HTTP   
-  transport: process-process data transfer  
-   * TCP, UDP   
-  network: routing of datagrams from source to destination   
-   * IP, routing protocols   
-  link: data transfer between neighboring network elements  
-   * Ethernet, wifi, PPP   
-  physical: bits "on the wire"   
+  * application: supporting network applications  
+    IMAP, SMTP, HTTP   
+  * transport: process-process data transfer  
+    TCP, UDP   
+  * network: routing of datagrams from source to destination   
+    IP, routing protocols   
+  * link: data transfer between neighboring network elements  
+    Ethernet, wifi, PPP   
+  * physical: bits "on the wire"   
   
   如一个HTTP请求，HTTP->TCP->IP，先转化成TCP数据包，再转化成IP数据包，再通过网卡传输出去；接收方通过网卡接收到IP数据包，  
   去掉IP数据头，检测到是一个TCP数据包,就把TCP数据包传到TCP协议处理层，去掉TCP数据头，检测到是一个HTTP数据包，就把HTTP数据包传到HTTP协议处理层。    
   所有的网络数据都是通过这样一层层的堆叠起来的协议来传送的，像栈一样，所以叫协议栈     
+  
+  协议、源IP、源端口、目的IP、目的端口确定一个TCP连接     
+  1. 顺序号：TCP段所发送的数据部分第一个字节的序号  
+  2. 确认号：期望收到对方下次发送的数据的第一个字节的序号  
+  3. 头部长度：单位为4字节，因此TCP首部的最大长度为60字节   
+  4. 窗口大小：窗口通告值，发送方根据接收方的窗口告值调整窗口大小    
+  5. 紧急指针：指示紧急数据在报文段中的结束位置此时URG置位  
+  6. URG：表示紧急指针字段有效  
+  7. ACK：表示确认号字段有效   
+  8. PSH：表示当前报文需要推操作   
+  9. RST：置位表示复位TCP连接  
+  10. SYN：用于建立TCP连接时同步序列号  
+  11. FIN：用于释放TCP连接时标识发送方比特流结束   
+   

@@ -142,5 +142,71 @@
     * 算法时间复杂度（即需要进行的步数）: 27 * 3
     * 递归的时间复杂度是指数级别， >> 27*3
 
-    
+	5. 小结
+
+    * 求最值型动态规划
+    * 动态规划组成部分：
+      * 确定状态
+        * 最后一步（最优策略中使用的最后一枚硬币ak）
+        * 化成子问题（最少的硬币拼出更小的面值27-ak）
+      * 转化方程
+        * f[x] = min{f[x-2]+1, f[x-5]+1, f[x-7]+1}  
+      * 初始条件和边界情况
+        * f[0] = 0， 如果不能拼出y, f[y] = 正无穷
+      * 计算顺序
+        * f[0], f[1], f[2], ...大部分从小到大
+        * 使用条件是f[x-2], f[x-5], f[x-7]先于f[x]
+    * 消除冗余，加速计算
+
+
+
+code:
+
+public int coinChange(int[] A, int M){
+
+//如果用到0...n:数组范围开到[n+1]
+
+//如果用到0...n-1:数组范围开到[n]
+
+​	int[] f = new int[M+1];
+
+​	int n = A.length; //number of kinds of coins
+
+//initialization
+
+​	f[0] = 0;
+
+​	int i, j;
+
+// f[1], f[2], ..., f[27]
+
+​	for(i = 1; i <=M; i++){
+
+​		f[i] = Integer.MAX_VALUE;
+
+​		//last coin A[j]
+
+​		// f[i] = min{f[i-A[0]]+1,..., f[i-A[n-1]]+1}
+
+​		for(j = 0; j < n; j++){
+
+​			if(i >= A[j] && f[i-A[j]] != Integer.MAX_VALUE){
+
+​				f[i] = Math.min(f[i-A[j]] + 1, f[i])
+
+​			}
+
+​		}
+
+​		if(f[M] == Integer.MAX_VALUE){
+
+​			f[M] = -1;
+
+​		}
+
+​		return f[M];
+
+​	}
+
+}
 

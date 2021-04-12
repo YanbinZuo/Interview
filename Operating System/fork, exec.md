@@ -5,6 +5,11 @@ After a fork call you get two copies of the same process:
 * There are a few exceptions, like open files
 * Cloning humans analogy...
 
+Difference:
+* fork is the process of the system call that you use to create a copy of the current process to a new process,
+so it creates a second process
+* exec will take the current process and replace it with a new program.
+* So, fork is for creating new processes, exec is for converting a current process to another program
 
 
 fork是linux的系统调用，用来创建子进程(child process)。子进程是父进程(parent process)的一个副本，从父进程那里  

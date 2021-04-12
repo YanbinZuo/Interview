@@ -1,3 +1,12 @@
+think about fork:
+After a fork call you get two copies of the same process:
+* Any computation moving formward only impacts that particular copy -- they are independent of each other
+* Each process will have its own pid and they will have different parents
+* There are a few exceptions, like open files
+* Cloning humans analogy...
+
+
+
 fork是linux的系统调用，用来创建子进程(child process)。子进程是父进程(parent process)的一个副本，从父进程那里  
 获得一定的资源分配以及继承父进程的环境。子进程与父进程唯一不同的地方在于pid(process id)。  
 环境变量(传给子进程的变量，遗传性是本地变量和环境变量的根本区别)只能单向从父进程传给子进程。不管子进程的环境   

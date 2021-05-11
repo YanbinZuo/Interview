@@ -20,7 +20,7 @@
     
 ### 3. bandwidth delay product  
   bandwidth delay product = R × d(prop)
-  
+  bandwidth delay product of  a link is the maximum number of bits that can be in the link.
 
 ### 4. queuing delay    
   At the queue, the packet experiences a queuing delay as it waits to be transmitted onto the link. The length of the queuing delay of      

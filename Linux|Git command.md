@@ -19,6 +19,7 @@
 
     
 sudo（管理员程序）    
+sudo su   进入root   
 clear    
 cc -v(gcc -v)查看当前版本    
 cd 进入目录    

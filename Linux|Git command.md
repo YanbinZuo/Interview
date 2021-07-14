@@ -63,6 +63,9 @@ hexdump [file]              查看binary format file
 hexdump -c [file]           查看binary format file 并且一个byte为单位   
 xxd [file]                  查看binary format file   
 cat ./w [file] | hexdump -c 查看可执行文件输出后的binary format file   
+
+Haskell:   
+load file: ghci -W 'test1.hs'   
    
 
 ### 解决学校permission denied方法  

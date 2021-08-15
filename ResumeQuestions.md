@@ -15,5 +15,13 @@ CAP theorem:（只能三选二。单机版做到极致可以满足consistency和
 •	Availability: Every request receives a (non-error) response – without guarantee that it contains the most recent write（流畅性，发送朋友圈后多久收到）    
   o	Error ratio  
   o Latency    
-•	Partition tolerance: The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes   
-Second difference:   
+•	Partition tolerance: The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes     
+Second difference:      
+Here is the second difference between MySQL and MongoDB. MySQL store data in tables with predefined schema. MongoDB stores data in flexible, JSON-like documents, and fields can vary from document to document.   
+
+SQL Concepts	MongoDB Concepts  
+Table      	Collection   
+Row	     Document  
+Column	   Field    
+Key	     Index   
+

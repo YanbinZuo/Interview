@@ -11,11 +11,11 @@
 关系型数据库：Excel 有行和列（SQL）
 * MySQL, Oracle, sql server, DB2, SQLite
 * 通过表和表之间，行和列之间的关系进行数据的存储
-* 
 非关系型数据库： {Key:Value} (NoSQL)
 * Redis，MongoDB
 * 非关系型数据库，对象存储，通过对象的自身属性来决定
 
 DBMS
 * 数据库的管理软件，科学有效的管理我们的数据。维护和获取数据
-* MySQL
+* MySQL，本质是数据库管理系统
+* 

@@ -1,3 +1,4 @@
+// https://medium.com/beyond-programming/alaaddin-and-his-carpet-algorithm-problem-of-the-week-i-8b4e39cc13bb
 public class Main {
     public static void main(String[] args) {
         //int[] magic = {2, 4, 5, 2};

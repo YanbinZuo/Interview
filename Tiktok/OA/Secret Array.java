@@ -1,3 +1,4 @@
+// https://leetcode.com/discuss/interview-question/1332322/amazon-online-assessment-july-2021-secret-array
 public static int countAnalogousArrays(List<Integer> consecutiveDifference, int lowerBound, int upperBound) {
  
    int count = 0, max = 0, min = 0;

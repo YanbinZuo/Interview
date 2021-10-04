@@ -1,28 +1,22 @@
 // leetcode: 1048
 class Solution {
     public int longestStrChain(String[] words) {
+        Map<String, Integer> dp = new HashMap<>();
         Arrays.sort(words, Comparator.comparingInt(String::length));
-        int[] dp = new int[words.length];
-        int res = 0;
-        for(int i = 0; i < words.length; i++){
-            for(int j = 0; j < words.length; j++){
-                if(predecessor(words[i], words[j])){
-                    dp[j] = Math.max(dp[j], dp[i]+1);
-                    res = Math.max(res, dp[j]);
-                }
+        int longestWordSequenceLength = 1;
+        for (String word : words) {
+            int presentLength = 1;
+            // Find all possible predecessors for the current word by removing one letter at a time.
+            for (int i = 0; i < word.length(); i++) {
+                StringBuilder temp = new StringBuilder(word);
+                temp.deleteCharAt(i);
+                String predecessor = temp.toString();
+                int previousLength = dp.getOrDefault(predecessor, 0);
+                presentLength = Math.max(presentLength, previousLength + 1);
             }
+            dp.put(word, presentLength);
+            longestWordSequenceLength = Math.max(longestWordSequenceLength, presentLength);
         }
-        return res+1;
-    }
-    
-    private boolean predecessor(String a, String b){
-        if(a.length()+1 != b.length())return false;
-        int i = 0;
-        int j = 0;
-        while(i < a.length() && j < b.length()){
-            if(a.charAt(i) == b.charAt(j))i++;
-            j++;
-        }
-        return i == a.length();
+        return longestWordSequenceLength;
     }
 }

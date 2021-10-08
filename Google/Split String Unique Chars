@@ -1,4 +1,5 @@
 // "static void main" must be defined in a public class.
+// similar to leedcode 1525
 public class Main {
     public static void main(String[] args) {
         System.out.println(splitStringUniqueChars("aaaa"));

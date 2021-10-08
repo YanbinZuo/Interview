@@ -1,0 +1,24 @@
+// "static void main" must be defined in a public class.
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(splitStringUniqueChars("aaaa"));
+        System.out.println(splitStringUniqueChars("bac"));
+        System.out.println(splitStringUniqueChars("ababa"));
+        System.out.println(splitStringUniqueChars("abcba"));
+    }
+    private static int splitStringUniqueChars(String input) {
+        HashMap<Character, Integer> left = new HashMap<>();
+        HashMap<Character, Integer> right = new HashMap<>();
+        int ans = 0;
+        for(char c : input.toCharArray()) right.put(c, right.getOrDefault(c, 0) + 1);
+        for(char c : input.toCharArray()) {
+            // Move character from right to left
+            right.put(c, right.getOrDefault(c, 0) - 1);
+            left.put(c, left.getOrDefault(c, 0) + 1);
+            if(right.get(c) == 0) break;
+            // Compare unique characters
+            if(right.keySet().equals(left.keySet())) ans++;
+        }
+        return ans;
+    }
+}

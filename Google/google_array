@@ -1,0 +1,28 @@
+// "static void main" must be defined in a public class.
+public class Main {
+    public static void main(String[] args) {
+        int[] arr0 = {2, 2, 2, 1};
+        int[] arr1 = {2, 4, 6, 7, 4, 7, 2};
+        int[] arr2 = {100, 100, 100};
+        int[] arr3 = {1000000000};
+        
+        System.out.println(solution(arr0));
+        System.out.println(solution(arr1));
+        System.out.println(solution(arr2));
+        System.out.println(solution(arr3));
+        
+    }
+    
+    public static int solution(int[] arr){
+        int n = arr.length;
+        int max = 0;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(Math.abs(i-j)==Math.abs(arr[i]-arr[j])){
+                    if(Math.abs(i-j)>max) max = Math.abs(i-j);
+                }
+            }
+        }
+        return max;
+    }
+}
